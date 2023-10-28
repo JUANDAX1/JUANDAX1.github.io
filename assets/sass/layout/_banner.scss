@@ -1,0 +1,220 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Banner */
+
+
+
+	#banner {
+		@include vendor('align-items', 'center');
+		@include vendor('background-image', 'url("../../images/banner.jpg")');
+		@include vendor('display', 'flex');
+		@include padding(4em, 0, (2em, 0, 0, 0));
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-bottom: 0 !important;
+		cursor: default;
+		height: 60vh;
+		margin-bottom: -3.25em;
+		max-height: 32em;
+		min-height: 22em;
+		position: relative;
+		top: -3.25em;
+
+		&:after {
+			@include vendor('transition', 'opacity #{_duration(banner)} ease');
+			@include vendor('transition-delay', '0.75s');
+			@include vendor('pointer-events', 'none');
+			background-color: _palette(bg);
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0.96;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		h1 {
+			font-size: 3.25em;
+			//text-align: center; // agregado para alinear el texto inicial al centro
+		}
+
+		> .inner {
+			@include vendor('transition', (
+				'opacity 1.5s ease',
+				'transform 0.5s ease-out',
+				'filter 0.5s ease',
+				'-webkit-filter 0.5s ease'
+			));
+			padding: 0 !important;
+			position: relative;
+			z-index: 2;
+
+			.image {
+				display: none;
+			}
+
+			header {
+				width: auto;
+
+				> :first-child {
+					width: auto;
+
+					&:after {
+						max-width: 100%;
+					}
+				}
+			}
+
+			.content {
+				@include vendor('display', 'flex');
+				@include vendor('align-items', 'center');
+				margin: 0 0 _size(element-margin) 0;
+
+				> * {
+					margin-right: 1.5em;
+					margin-bottom: 1.5;
+				}
+
+				> :last-child {
+					margin-right: 0;
+				}
+
+				p {
+					font-size: 1.5em;
+					font-weight: _font(weight-bold);
+					letter-spacing: _font(letter-spacing-alt);
+					//text-transform: uppercase;
+					;
+				}
+				
+				/* inicio del codigo de animacion */
+				
+				#typewriter {
+					overflow: hidden;
+					border-right: .15em solid rgb(7, 3, 1);
+					white-space: nowrap;
+					//margin: 0;
+					//padding: 0;
+					//font-size: 16px; /* Ajusta el tamaño de fuente a tu preferencia */
+					//width: 0; /* Inicialmente, el ancho es cero para ocultar el texto */
+				}
+
+				/* Define la animación de máquina de escribir */
+				@keyframes typing {
+					0% { width: 0; }
+					100% { width: 100%; }
+				}
+
+				/* Aplica la animación al elemento <p> */
+				#typewriter {
+					animation: typing 5s steps(40, end) forwards;
+					border-right: .15em solid transparent; /* Oculta el cursor al final de la animación */
+				}
+				/* fin del codigo de animacion */
+
+				
+
+			}
+		}
+
+		&.major {
+			height: 98vh; //editado de 70 a 98 para que tome toda la patalla al iniciar
+			min-height: 30em;
+			max-height: 50em;
+
+			&.alt {
+				opacity: 0.75;
+			}
+
+			
+		}
+
+		// alterno2 - agregado para sacar el banner landing
+		&.alterno2 {	
+			height: 1vh; //editado de 
+			margin-bottom: 1em;
+			max-height: 1em;
+			min-height: 1em;
+		}
+
+		&.style1 { &:after { background-color: _palette(accent1); } }
+		&.style2 { &:after { background-color: _palette(accent2); } }
+		&.style3 { &:after { background-color: _palette(accent3); } }
+		&.style4 { &:after { background-color: _palette(accent4); } }
+		&.style5 { &:after { background-color: _palette(accent5); } }
+		&.style6 { &:after { background-color: _palette(accent6); } }
+
+		body.is-preload & {
+			&:after {
+				opacity: 1.0;
+			}
+
+			> .inner {
+				@include vendor('filter', 'blur(0.125em)');
+				@include vendor('transform', 'translateX(-0.5em)');
+				opacity: 0;
+			}
+		}
+
+		@include breakpoint('<=large') {
+			background-attachment: scroll;
+		}
+
+		@include breakpoint('<=small') {
+			@include padding(3em, 0, (2em, 0, 0, 0));
+			height: auto;
+			margin-bottom: -2.75em;
+			max-height: none;
+			min-height: 0;
+			top: -2.75em;
+
+			h1 {
+				font-size: 2em;
+			}
+
+			> .inner {
+				.content {
+					display: block;
+
+					> * {
+						margin-right: 0;
+						margin-bottom: _size(element-margin);
+					}
+				}
+			}
+
+			&.major {
+				height: auto;
+				min-height: 0;
+				max-height: none;
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			@include padding(4em, 0, (2em, 0, 0, 0));
+
+			> .inner {
+				.content {
+					p {
+						br {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&.major {
+				@include padding(6em, 0, (2em, 0, 0, 0));
+			}
+		}
+		
+	}
