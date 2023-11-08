@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CRO Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- 
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		-->
+		<link rel="stylesheet" href="assets/sass/main.css" />
+		<noscript><link rel="stylesheet" href="assets/sass/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>JPierre</strong> <span>Data Analist</span></a>
+						<span class="image">
+							<img src="iconos_x/Cinta-de-skills-1.png" alt="" style="width: 45rem; height: 50px; display: block; margin-left: 90px; margin-right: auto; opacity: 0.9;" />
+						</span>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="generic.html"></a></li>
+						<li><a href="elements.html"></a></li>
+					</ul>
+					<!--
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary fit">Get Started</a></li>
+						<li><a href="#" class="button fit">Log In</a></li>
+					</ul>
+					-->
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Conversion Rate Optimization For <span><strong style="color: rgb(221, 117, 193);">E-Commerce</strong></strong></span></h1>
+									</header>
+									<!-- 
+									<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+									-->
+									<div class="row">
+										<div class="col-4">
+											<div class="box" style="color:rgb(221, 117, 193);">
+												<h4>Downloads</h4>
+												
+													<ul>
+														<li><a href="https://nbviewer.org/github/JUANDAX1/Conversion-rate-optimization/blob/main/Conversion%20rate%20optimization_python_01.ipynb" target="_blank">Jupyter Notebook</a></li>
+														<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSUNpTlQgga6s_zblsDPnCP1CYLN1e_5JY-AaahmwkePyM4ZjBaN1_XQO2uJV_wRz4NgJEYIMm7E48W/pub?start=true&loop=false&delayms=5000" target="_blank">Executive Insight Report</a></li>
+														<li><a href="javascript:void(0);" onclick="confirmarDescarga()">Business case (.xls)</a></li>
+														<li><a href="https://www.linkedin.com/in/Juan-Pierre" target="_blank">Linkedin Profile</a></li>
+													</ul>
+											</div>
+											
+										</div>
+										<div class="col-8">
+											<p>En esta sección, se encontrará un resumen ejecutivo que destaca los puntos clave en el desarrollo del proyecto. Para obtener información más detallada, <strong> puede expandir las imagenes haciendo click sobre cada una </strong> y  acceder a los recursos disponibles en el panel a la izquierda. Estos valiosos recursos proporcionarán una visión más profunda del trabajo realizado, permitiendo a la empresa tomar decisiones informadas para impulsar su éxito empresarial.</p>
+											<h3>Introduction</h3>
+											<p>En este proyecto se aborda el caso de un comercio tipo ecommerce que presenta estancamiento en sus ventas. Se aplicaran técnicas analíticas a los registros transaccionales con el fin de obtener lineas de accion para el diseño de una estrategia basada en datos. Al final del preoyecto, se entregan resultados de diagnóstico en las áreas analizadas, seguido de las acciones estratégicas de resolución para incrementar el CRO.</p>
+										</div>
+									</div>
+									<div class="row">
+										
+										<div class="col-6">
+											<h3>ETL PROCESS</h3>
+											<p>Con el fin de potenciar las estrategias de Optimización de la Tasa de Conversión (CRO) en la empresa, se lleva a cabo el procesamiento de los datos transaccionales. Estos datos se han segmentado según las sesiones de cada usuario en la plataforma web del comercio. Para realizar este proceso, se ha importado paquetes de Python utilizando Jupyter Notebook. Los datos están almacenados en cuatro tablas dentro de una base de datos SQLite, y se ha implementado el paquete SQLAlchemy de Python para gestionarlos eficazmente.</p>
+										</div>
+										<div class="col-6">
+											<span class="image fit"><img class="expandirx" src="images/conexion-etl_CRO.png" alt="creacion de un DataFrame" /></span>
+										</div>
+
+										<div class="inner">
+											<p>Tras establecer la conexión con la base de datos, <strong style="color: rgb(221, 117, 193);">se genera un DataFrame utilizando la función "concat" de Pandas. </strong>Un punto crítico en este proceso involucra la corrección del tipo de dato de la variable "event_time" para asegurar un índice de tipo "datetime64", lo cual optimiza la indexación. Se procede a la eliminación de datos nulos y variables que carecen de relevancia para el análisis. Por último, se crean nuevas variables y se consolida un tablón analítico general. Este procedimiento resulta fundamental para mejorar la calidad de los datos y permitir un análisis más efectivo en pro de los objetivos de optimización de la tasa de conversión.</p>
+										</div>
+
+										<div class="col-6">
+											<h3>EDA PROCESS</h3>
+											<p>El proceso de análisis se inicia con un <strong style="color: rgb(221, 117, 193);">enfoque separado en las tres áreas clave que impactan en el rendimiento del negocio: ventas, clientes y productos. </strong>Al evaluar los eventos en términos de tipo y cantidad, se revela que, de todas las sesiones, un 60% involucra productos en el carrito, lo que se traduce en una conversión del 22% en ventas. Destaca la importancia de observar los horarios específicos en los cuales se registra un aumento en las visitas y, en consecuencia, un incremento en las conversiones.</p>
+										</div>
+										<div class="col-6">
+											<span class="image fit"><img class="expandirx" src="images/ticket_medio_CRO.png" alt="tendencia de facturación mensual" /></span>
+										</div>
+
+										<div class="inner">
+											<p>El análisis de la facturación mensual, representado en la imagen, revela que la evolución del negocio se mantiene sin crecimientos importantes. La mayoría de los clientes efectúan una sola compra, lo que señala una oportunidad de mejorar la retención de clientes y fomentar compras repetidas. Además, se identifican productos con un alto número de visualizaciones pero una actividad de compra limitada, lo que sugiere la posibilidad de potenciar estos productos atractivos para los clientes y aumentar las conversiones. Estos hallazgos proporcionan una base sólida para tomar medidas estratégicas que impulsen el crecimiento del negocio y mejoren la tasa de conversión.</p>
+										</div>
+
+										<div class="col-6">
+											<h3>CONCLUTIONS</h3>
+											<p>Los datos recopilados permiten ofrecer recomendaciones estratégicas al comercio. Una de las sugerencias destacadas se relaciona con la franja horaria de mayor conversión, lo que impulsa a optimizar las campañas de pago, enfocando la inversión en intervalos clave. Según el mapa de calor, se recomienda concentrar los esfuerzos promocionales entre las 9-13 y 18-20 horas. <strong style="color: rgb(221, 117, 193);"> Estas recomendaciones, respaldadas por datos concretos, tienen el potencial para impulsar el incremento sistemático de la tasa de conversión y el éxito del negocio.</strong></p>
+										</div>
+										<div class="col-6">
+											<span class="image fit"><img class="expandirx" src="images/Diapositiva2.JPG" alt="exhibit 1 _ heat map de las horas de tráfico" /></span>
+											
+										</div>
+										<p>La disposición de los datos representó un desafío en la normalización de la información a analizar. El análisis exploratorio proporcionó métricas precisas para establecer el punto de referencia de la situación actual del negocio. Finalmente, se presentan recomendaciones para aumentar las visualizaciones, la retención de clientes y la frecuencia de compras, todo lo cual se detalla en los documentos disponibles en el panel de descarga al inicio de esta página.</p>
+										<div class="col-6">
+											<h3>Business Case</h3>
+											<p>Para llevar a cabo la implementación de las recomendaciones, se presenta un caso de negocio con el propósito de evaluar la viabilidad de la propuesta. <strong style="color: rgb(221, 117, 193);">El estudio arroja un ROI del 1.2 en el primer año de aplicación, acumulando un ROI del 4.2 en tres años.</strong> Estos cálculos están proyectados a tres años y se muestran tres escenarios de estimación, todos con resultados favorables. Para obtener información más detallada, se le le invita a descargar el archivo Excel en el panel de.</strong></p>
+										</div>
+										<div class="col-6">
+											<span class="image fit"><img class="expandirx" src="images/BC-gif-escenarios.gif" alt="exhibit 1 _ heat map de las horas de tráfico" /></span>
+											
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+				
+					
+				<!-- Contact -->
+
+				<!-- CIERRE DE SECCION
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+					CIERRE DE SECCION   -->
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/scriptix.js"></script>
+			
+
+	</body>
+</html>
