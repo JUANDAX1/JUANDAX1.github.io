@@ -2754,12 +2754,6 @@ body.is-preload #header.alt {
 #banner.major.alt {
   opacity: 0.75;
 }
-#banner.alterno2 {
-  height: 1vh;
-  margin-bottom: 1em;
-  max-height: 1em;
-  min-height: 1em;
-}
 #banner.style1:after {
   background-color: #6fc3df;
 }
@@ -3110,3 +3104,9 @@ body.is-menu-visible #menu .inner {
   opacity: 1;
   visibility: visible;
 }/*# sourceMappingURL=main.css.map */
+/* styles.css */
+.expandirx {
+  width: 100%; /* Tamaño inicial de la imagen */
+  height: auto; /* Mantén la proporción original */
+  transition: transform 0.5s; /* Agrega una transición suave */
+}

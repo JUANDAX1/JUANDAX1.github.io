@@ -61,7 +61,7 @@
 			.image {
 				display: none;
 			}
-
+			
 			header {
 				width: auto;
 
@@ -136,16 +136,11 @@
 			}
 
 			
+
+			
 		}
 
-		// alterno2 - agregado para sacar el banner landing
-		&.alterno2 {	
-			height: 1vh; //editado de 
-			margin-bottom: 1em;
-			max-height: 1em;
-			min-height: 1em;
-		}
-
+	
 		&.style1 { &:after { background-color: _palette(accent1); } }
 		&.style2 { &:after { background-color: _palette(accent2); } }
 		&.style3 { &:after { background-color: _palette(accent3); } }
@@ -218,3 +213,5 @@
 		}
 		
 	}
+
+	
