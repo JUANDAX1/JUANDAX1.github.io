@@ -3110,3 +3110,11 @@ body.is-menu-visible #menu .inner {
   height: auto; /* Mantén la proporción original */
   transition: transform 0.5s; /* Agrega una transición suave */
 }
+.con-padding {
+  padding-top: 50px; 
+  padding-bottom: 20px; 
+}
+.con-padding2 {
+  padding-top: 60px; 
+  padding-bottom: 20px; 
+}
