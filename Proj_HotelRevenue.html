@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Proj_HotelRevenue</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- 
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	-->
+	<link rel="stylesheet" href="assets/sass/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/sass/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><strong>JPierre</strong> <span>Data Analist</span></a>
+			<span class="image">
+				<img src="iconos_x/Cinta-de-skills-1.png" alt=""
+					style="width: 45rem; height: 50px; display: block; margin-left: 90px; margin-right: auto; opacity: 0.9;" />
+			</span>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<ul class="action">
+					<li><a href="CRO_project.html" class="scrolly">E-COMMERCE</a></li>
+					<li><a href="Proj_nancypizza.html" class="scrolly">Efficiency (Nancy´s
+							Pizza)</a></li>
+					<li><a href="Proj_HotelRevenue.html" class="scrolly">Hotel Revenue</a></li>
+					
+				<ul/>
+				
+			</ul>
+			<!--
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary fit">Get Started</a></li>
+						<li><a href="#" class="button fit">Log In</a></li>
+					</ul>
+					-->
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Hotel<strong style="color: rgb(221, 117, 193);"> Revenue </strong> Management </h1>
+					</header>
+					<!-- 
+									<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+									-->
+					<div class="row">
+						<div class="col-4">
+							<div class="box" style="color:rgb(221, 117, 193);">
+								<h4>Informes</h4>
+
+								<ul>
+									<li><a href="https://github.com/JUANDAX1/Project_Hotel-Revenue/blob/main/Hotel%20Revenue_Project_qwerys.sql"
+											target="_blank">SQL Files</a></li>
+									<li><a href="https://github.com/JUANDAX1/Project_Hotel-Revenue/blob/main/Hotels_Revenue_Dashboard_PBI.pbix"
+											target="_blank">Power BI Dashboard (file)</a></li>
+									<li><a href="https://github.com/JUANDAX1/Project_Hotel-Revenue/blob/main/README.md"
+											target="_blank">GuitHub repository</a></li>
+									<li><a href="https://www.linkedin.com/in/Juan-Pierre" target="_blank">Linkedin
+											Profile</a></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="col-8">
+							<h3>Introduction</h3>
+							<p>En este proyecto, brindaremos apoyo al equipo de gestión hotelera que supervisa dos
+								establecimientos que enfrentan desafíos de crecimiento. La solicitud se centra en
+								analizar datos para proporcionar percepciones relevantes sobre tres necesidades clave:
+								1) Evaluar la rentabilidad anual de ambos hoteles, 2) Justificar la necesidad de
+								incrementar espacios de estacionamiento para los huéspedes y 3) Ofrecer información
+								relacionada con patrones para la planificación estratégica.</p>
+							<p>A partir de los requerimientos del departamento de gestión hotelera, surgen tres
+								preguntas fundamentales para guiar el análisis:</p>
+
+							<ol>
+								<li>¿Cuál es el crecimiento anual de los ingresos en ambos hoteles?</li>
+								<li>¿Disponen de estacionamientos suficientes para satisfacer la demanda?</li>
+								<li>¿Cuales son las tendencias generales a considerar en el negocio?</li>
+							</ol>
+
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="col-6">
+							<h3>Ficheros y Base de Datos</h3>
+							<p>En este proyecto experimental, el dataset se extrae de Kaggle.com, una plataforma que
+								proporciona conjuntos de datos de ejemplo para proyectos de análisis de datos. Se
+								obtiene un archivo en formato Excel con información transaccional de los hoteles,
+								sumando aproximadamente 150,000 registros que abarcan períodos de 2018 a 2020. Cada año
+								se encuentra en una hoja distinta, junto con una tabla que establece descuentos
+								especiales por segmento de clientes y montos variables para servicios de desayuno.</p>
+
+							<p>Se inicia la creación de la base de datos en SQL Server y se realiza la carga masiva de
+								datos en diversas tablas desde el archivo. <strong style="color: rgb(221, 117, 193)"
+									;>Utilizando la función UNION ALL de SQL, se
+									fusionan las distintas hojas en un único conjunto de datos,</strong> verificando
+								previamente que
+								las tres tablas tengan la misma estructura de columnas. El enlace a los archivos
+								originales está accesible en la sección de informes.</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/FIcehros_excel_hotel.png"
+									alt="" /></span>
+							<span class="image fit expandirx"><img class="" src="images/SQL Server_hotel_1.png"
+									alt="" /></span>
+						</div>
+
+
+						<div class="inner">
+							<p>En este punto obtenemos una base de datos funcioanal a traves de la cual vamos a realizar
+								las consultas que responden a las preguntas de negocio iniciales.</p>
+						</div>
+
+						<div class="col-6">
+							<h3>Consultas de SQL Server</h3>
+							<p><strong <strong>1-¿Cuál es el crecimiento anual de los ingresos en ambos
+									hoteles?</strong></p>
+							<p>En nuestra base de datos, no contamos con la información directa de ingresos, pero sí
+								disponemos de la tarifa media diaria (adr), las estancias en noches de semana
+								(stays_in_week_nights) y las estancias en noches de fin de semana
+								(stays_in_weekend_nights). En consecuencia, procederemos a generar una nueva columna de
+								ingresos (revenue) utilizando los datos de estas tres columnas. Finalmnte se agrega una
+								columna para agrupar la suma de ingresos por año.</p>
+							<p><strong style="color: rgb(225, 234, 107)" ;>En la tabla final, se observa un aumento en
+									los ingresos de 2018 a 2019, seguido de una
+									disminución en 2020.</strong>
+							</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/respuesta_1_version_2.png"
+									alt="qwery respuesta 1" /></span>
+						</div>
+						<div class="col-6">
+							<p><strong <strong>2-¿Disponen de estacionamientos suficientes para satisfacer la
+									demanda?</strong></p>
+							<p>Se crea una consulta para determinar el porcentaje de ocupación de los espacios de
+								estacionamiento en comparación con los ingresos generados por dicho nivel de ocupación.
+								Para calcular los ingresos, se multiplica la suma de las estadías por el costo promedio
+								diario de ocupación y se nombra esta columna como "revenue". Asimismo, la suma de las
+								estadías se distribuye entre los espacios de estacionamiento necesarios para obtener el
+								nivel relativo de ocupación por año y por hotel.</p>
+
+							<p>El resultado de esta consulta indica que los niveles de ocupación de los espacios de
+								estacionamiento se encuentran en niveles aceptables. <strong
+									style="color: rgb(225, 234, 107)" ;>La demanda histórica no supera el
+									2% en el City Hotel ni el 4% en el Resort Hotel, lo que no justifica un proyecto de
+									ampliación.</strong></p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/respuesta_2.png" alt="" /></span>
+
+						</div>
+						<div class="col-6">
+							<p><strong <strong>3-¿Cuales tendencias son importantes de resaltar en los datos?</strong>
+							</p>
+							<p>Para cumplir con el tercer requisito, se debe crear una herramienta de visualización que
+								permita analizar patrones en los datos de manera interactiva. Se tiene previsto diseñar
+								un panel sencillo utilizando la tecnología de Power BI. Antes de establecer la conexión
+								a la base de datos de SQL Server desde Power BI, es necesario procesar algunas columnas.
+							</p>
+							<p>El hotel ofrece un programa de descuentos basado en acuerdos con ciertos segmentos del
+								mercado, detallados en la tabla "market_segment".<strong
+									style="color: rgb(225, 234, 107)" ;>Se aplicarán dos procedimientos de
+									Join: uno para generar la columna con los descuentos de cada segmento y otro para
+									obtener el costo de los desayunos.</strong> Finalmente, obtenemos una única consulta
+								que le pasaremos a la conexión del servidor para
+								exportar los datos a Power BI.</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/respuesta_3_sql.png"
+									alt="" /></span>
+
+						</div>
+						<div class="col-6">
+							<p>Las tendencias que se pueden observar en los datos son las siguientes:
+							</p>
+							<div>
+								<ol>
+									<li><strong style="color: rgb(221, 117, 193)" ;>El mes de julio marca el inicio de la temporada alta, mostrando una tendencia de
+										crecimiento constante en esos meses de cada año.</strong></li>
+									<li>Los ingresos anuales muestran una tendencia al alza, pasando de 3.3 a 7.5 en dos
+										años, reflejando un crecimiento del 56%.</li>
+									<li>El precio promedio por noche presenta un marcado aumento, pasando de $88 a $112,
+										lo que implica un crecimiento del 21%.</li>
+									<li>Los descuentos exhiben una tendencia estacionaria, siendo el hotel con mayores
+										ingresos también el que aplica mayores descuentos en promedio.</li>
+									<li>Los ingresos anuales y las noches promedio disminuyen entre 2019 y 2020, aunque
+										representan un crecimiento en comparación con 2018.</li>
+									<li>Se sugiere que la disminución en 2020 se debe a la situación de la pandemia
+										mundial.</li>
+									
+								</ol>
+							</div>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/dashboard_pbi_hotel.png"
+									alt="" /></span>
+
+						</div>
+						<div class="box alt">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-4"><span class="image fit expandirx"><img src="images/descuento_promedio.png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit expandirx"><img src="images/Precio_promedio_noche.png" alt="" /></span></div>
+								<div class="col-4"><span class="image fit expandirx"><img src="images/Ingreso_año_hotel.png" alt="" /></span></div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+
+		<!-- Contact -->
+
+		<!-- CIERRE DE SECCION
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+					CIERRE DE SECCION   -->
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<!--
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					-->
+					<li><a href="https://github.com/JUANDAX1" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/Juan-Pierre" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; JuanPierre 2023</li>
+					<li>Design: <a href="https://www.linkedin.com/in/Juan-Pierre">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scriptix.js"></script>
+
+
+</body>
+
+</html>
