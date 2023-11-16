@@ -2747,7 +2747,7 @@ body.is-preload #header.alt {
   border-right: 0.15em solid transparent; /* Oculta el cursor al final de la animación */
 }
 #banner.major {
-  height: 98vh;
+  height: 100vh;
   min-height: 30em;
   max-height: 50em;
 }
@@ -3104,17 +3104,3 @@ body.is-menu-visible #menu .inner {
   opacity: 1;
   visibility: visible;
 }/*# sourceMappingURL=main.css.map */
-/* styles.css */
-.expandirx {
-  width: 100%; /* Tamaño inicial de la imagen */
-  height: auto; /* Mantén la proporción original */
-  transition: transform 0.5s; /* Agrega una transición suave */
-}
-.con-padding {
-  padding-top: 50px; 
-  padding-bottom: 20px; 
-}
-.con-padding2 {
-  padding-top: 60px; 
-  padding-bottom: 20px; 
-}
