@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Proj Nancy Pizza</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- 
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		-->
+	<link rel="stylesheet" href="assets/sass/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/sass/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><strong>JPierre</strong> <span>Data Analist</span></a>
+			<span class="image">
+				<img src="iconos_x/Cinta-de-skills-1.png" alt=""
+					style="width: 45rem; height: 50px; display: block; margin-left: 90px; margin-right: auto; opacity: 0.9;" />
+			</span>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<ul class="action">
+					<li><a href="CRO_project.html" class="scrolly">E-COMMERCE</a></li>
+					<li><a href="Proj_nancypizza.html" class="scrolly">Efficiency (Nancy´s
+							Pizza)</a></li>
+					<li><a href="Proj_HotelRevenue.html" class="scrolly">Hotel Revenue</a></li>
+
+					<ul />
+
+				</ul>
+				<!--
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary fit">Get Started</a></li>
+						<li><a href="#" class="button fit">Log In</a></li>
+					</ul>
+					-->
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Most <strong style="color: rgb(221, 117, 193);">Profitable Neighborhoods</strong> For AirBnb
+						</h1>
+					</header>
+					<!-- 
+									<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+									-->
+					<div class="row">
+						<div class="col-4">
+							<div class="box" style="color:rgb(221, 117, 193);">
+								<h4>Informes</h4>
+
+								<ul>
+									<li><a href="https://github.com/JUANDAX1/Nancy-s-Pizza-Project/blob/main/qwery_SQL_consultas_.sql"
+											target="_blank">SQL Files</a></li>
+									<li><a href="https://lookerstudio.google.com/reporting/0faf11ec-477d-4ce0-93d3-fb4a7ac4370d"
+											target="_blank">Dashboard_nancypizza</a></li>
+									<li><a href="https://github.com/JUANDAX1/Nancy-s-Pizza-Project/blob/main/Requerimientos.jpg"
+											target="_blank">GuitHub repository</a></li>
+									<li><a href="https://www.linkedin.com/in/Juan-Pierre" target="_blank">Linkedin
+											Profile</a></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="col-8">
+							<h3>Introduction</h3>
+							<p>El objetivo es identificar oportunidades rentables en el mercado inmobiliario de Madrid.
+								Buscamos determinar las tipologías de inmuebles y ubicaciones ideales para el negocio.
+								Analizaremos los datos públicos de AirBnb para identificar los tipos de propiedades con
+								mayor potencial para el alquiler turístico.
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+
+						<div class="col-6">
+							<h3>Normalización y Creación de la Base de Datos</h3>
+							<p>Los datos de transacciones se manejan a través de hojas de Excel generadas por el sistema
+								de facturación del comercio. Se toman muestras de esta información con el propósito de
+								desarrollar un sistema de base de datos que mejore la gestión de la información clave.
+								Se analizan los archivos para eliminar redundancias y se crea un modelo de base de datos
+								utilizando la herramienta QuickDBD.</p>
+							<p>Luego de obtener los archivos de creación de la base de datos en formato SQL, <strong
+									style="color: rgb(221, 117, 193);">se procede a establecer el esquema en MySQL
+									Workbench.</strong> Posteriormente, se lleva a cabo la carga masiva de los archivos
+								de Excel que contienen los datos de las transacciones, distribuyéndolos en las
+								respectivas tablas. El enlace a los archivos originales se encuentra disponible en la
+								sección de informes.</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/workBench_01.png"
+									alt="creacion de un DataFrame" /></span>
+						</div>
+
+						<div class="inner">
+							<p>En este punto obtenemos una base de datos funcioanal a traves de la cual vamos a realizar
+								las consultas necesarias para crear el datamart.</p>
+						</div>
+
+						<div class="col-6">
+							<h3>Consultas de MySQL</h3>
+							<p>La base de datos resultante alberga 10 tablas, en las cuales se llevarán a cabo
+								operaciones de agrupación para la creación de consultas fundamentales para los cálculos.
+								Conforme se expone en la introducción, se desarrolla un análisis centrado en tres áreas
+								clave, dando origen a un igual número de consultas. Las primeras operaciones de JOIN se
+								ejecutan entre las tablas "orders," "items," y "address" para obtener la base de los KPI
+								de ventas. Para el control de inventario, se realizan JOINs con las tablas "orders,"
+								"items," "recipe," e "ingredient." <strong style="color: rgb(221, 117, 193);">Se crea
+									una vista de consulta con el propósito de optimizar los recursos al cargar la
+									información en Google Cloud.</strong> Este servicio permite generar consultas
+								personalizadas, posibilitando el uso de vistas de SQL en lugar de las tablas.</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/qwerySQL_01.png"
+									alt="tendencia de facturación mensual" /></span>
+						</div>
+
+						<div class="inner">
+							<p>Los cálculos para los KPI de personal se generan directamente desde la consulta de SQL
+								después de realizar operaciones de JOIN entre las tablas "Staff" y "Shift", que
+								contienen los datos de los colaboradores y los horarios de trabajo en turnos,
+								respectivamente. En este contexto, la función TIMESTAMPDIFF de MySQL desempeña un papel
+								fundamental..</p>
+						</div>
+
+						<div class="col-6">
+							<h3>Creando el Dashboard con Looker Studio</h3>
+							<p>El dashboard generado presenta tres informes fundamentados en las dimensiones del
+								problema empresarial. <strong style="color: rgb(221, 117, 193);">En el primer informe,
+									se destaca la evolución de las ventas por categoría y por producto, permitiendo una
+									rápida observación del volumen de ventas.</strong> Se incluyen tarjetas para
+								monitorear la cantidad de órdenes y productos vendidos en tiempo real. Además, el
+								importe total y el promedio del valor monetario proporcionan una visión clara de la
+								evolución de la estrategia financiera.</p>
+
+							<p>El segundo dashboard proporciona un desglose del consumo de recursos, que se descuenta de
+								manera precisa y automática con cada venta generada. Este informe ofrece información
+								sobre el volumen de ventas de cada producto, su nivel de stock actual y genera dos
+								alertas por bajos niveles de stock.</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/dash_pizza_2.png"
+									alt="exhibit 1 _ heat map de las horas de tráfico" /></span>
+
+						</div>
+						<div class="col-6">
+							<h3>Conclusión</h3>
+							<p>Con este proyecto, Nancy transforma por completo su negocio, <strong
+									style="color: rgb(221, 117, 193);">pasando de simples hojas de Excel a un sistema de
+									gestión de datos versátil y escalable.</strong> Esto le brinda la capacidad de tomar
+								decisiones precisas sobre las ventas, monitorear su inventario de insumos y gestionar
+								los presupuestos de gastos en personal. De esta manera, se cumplen con éxito todos los
+								requerimientos iniciales del cliente.</p>
+							<p>Este proyecto experimental simula un problema de negocio real e implementa una solución
+								viable que puede funcionar de manera óptima en entornos de producción reales. La
+								implementación de servicios de bases de datos y almacenamiento en la nube permite la
+								actualización en línea, escalabilidad y versatilidad de la solución.</p>
+						</div>
+						<div class="col-6">
+							<span class="image fit expandirx"><img class="" src="images/control_de_stock_01.png"
+									alt="exhibit 1 _ heat map de las horas de tráfico" /></span>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+
+		<!-- Contact -->
+
+		<!-- CIERRE DE SECCION
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+					CIERRE DE SECCION   -->
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<!--
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					-->
+					<li><a href="https://github.com/JUANDAX1" class="icon brands alt fa-github" target="_blank"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/Juan-Pierre" class="icon brands alt fa-linkedin-in"
+							target="_blank"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; JuanPierre 2023</li>
+					<li>Design: <a href="https://www.linkedin.com/in/Juan-Pierre">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scriptix.js"></script>
+
+
+</body>
+
+</html>
